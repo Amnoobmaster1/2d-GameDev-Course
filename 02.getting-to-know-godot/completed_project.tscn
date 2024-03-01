@@ -92,7 +92,7 @@ layer = 100
 offset_left = 32.0
 offset_top = 40.0
 offset_right = 381.0
-offset_bottom = 113.0
+offset_bottom = 167.0
 
 [node name="Player" parent="." instance=ExtResource("4_idksr")]
 position = Vector2(768, 512)
