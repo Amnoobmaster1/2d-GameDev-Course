@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://dfrp0km2xjcr6"]
+[gd_scene load_steps=10 format=3 uid="uid://dfrp0km2xjcr6"]
 
 [ext_resource type="Script" path="res://game.gd" id="2"]
 [ext_resource type="TileSet" uid="uid://crkgfdw1y80hc" path="res://levels/rooms/tileset_bridges.tres" id="2_vnf5n"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://dgayuh42w4v6u" path="res://levels/rooms/room_b.tscn" id="6_f0411"]
 [ext_resource type="PackedScene" uid="uid://cq0mmphkbrvmm" path="res://levels/rooms/room_c.tscn" id="7_518vm"]
 [ext_resource type="PackedScene" uid="uid://wdey00p3syru" path="res://levels/background/background_blue_sky.tscn" id="8_uan0n"]
+[ext_resource type="PackedScene" uid="uid://cce7r30dfjm4r" path="res://interface/bars/ui_health_bar.tscn" id="9_0iwr2"]
 
 [node name="Start" type="Node2D"]
 script = ExtResource("2")
@@ -29,12 +30,22 @@ metadata/_edit_lock_ = true
 position = Vector2(0, -128)
 
 [node name="RoomA" parent="." instance=ExtResource("5_w6q18")]
-position = Vector2(-401, -529)
+position = Vector2(-643, -633)
 
 [node name="RoomB" parent="." instance=ExtResource("6_f0411")]
-position = Vector2(-286, -528)
+position = Vector2(-522, -509)
 
 [node name="RoomC" parent="." instance=ExtResource("7_518vm")]
-position = Vector2(-401, -529)
+position = Vector2(-643, -633)
 
 [node name="BackgroundBlueSky" parent="." instance=ExtResource("8_uan0n")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="UIHealthBar" parent="CanvasLayer" instance=ExtResource("9_0iwr2")]
+offset_left = 60.0
+offset_top = 60.0
+offset_right = 378.0
+offset_bottom = 132.725
+
+[connection signal="health_changed" from="Player" to="." method="_on_player_health_changed"]
