@@ -28,6 +28,7 @@ metadata/_edit_lock_ = true
 
 [node name="Player" parent="." instance=ExtResource("4_ysonw")]
 position = Vector2(0, -128)
+scale = Vector2(2.0159, 1.15291)
 
 [node name="RoomA" parent="." instance=ExtResource("5_w6q18")]
 position = Vector2(-643, -633)
