@@ -21,3 +21,7 @@ func _process(delta: float) -> void:
 		position += velocity * delta
 		if velocity.length() > 0.0:
 			rotation = velocity.angle()
+
+
+func _on_timer_timeout():
+	pass # Replace with function body.
