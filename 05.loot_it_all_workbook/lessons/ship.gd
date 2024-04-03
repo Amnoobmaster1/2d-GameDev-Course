@@ -11,6 +11,7 @@ func _process(delta: float) -> void:
 	direction.x = Input.get_axis("move_left", "move_right")
 	direction.y = Input.get_axis("move_up", "move_down")
 	
+	
 	position += velocity * delta
 	
 	if velocity.length() > 0.0:
@@ -24,5 +25,3 @@ func _process(delta: float) -> void:
 	velocity += steering * steering_factor * delta
 	position += velocity * delta
 
-	if velocity.length() > 0.0:
-		rotation = velocity.angle()
