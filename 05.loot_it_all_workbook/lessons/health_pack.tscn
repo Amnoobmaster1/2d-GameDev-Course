@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://dj314kki8uxyu"]
+[gd_scene load_steps=4 format=3 uid="uid://c6l0xdlcvy5w6"]
 
 [ext_resource type="Script" path="res://HealthPack.gd" id="1_4pgas"]
 [ext_resource type="Texture2D" uid="uid://dknpi2mq4dhpa" path="res://assets/health_icon.svg" id="2_ahoge"]
@@ -8,6 +8,7 @@ radius = 25.0799
 
 [node name="HealthPack" type="Area2D" groups=["healing_item"]]
 position = Vector2(923, 512)
+collision_layer = 2
 script = ExtResource("1_4pgas")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -16,3 +17,5 @@ texture = ExtResource("2_ahoge")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_pvivd")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

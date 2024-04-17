@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://dmv50krf4bo5r"]
+[gd_scene load_steps=9 format=3 uid="uid://blop8miftg2c0"]
 
 [ext_resource type="Texture2D" uid="uid://bniyrxn3r2v8h" path="res://assets/ship.png" id="3_pdppw"]
 [ext_resource type="Script" path="res://lessons/ship.gd" id="4_p1sls"]
@@ -22,6 +22,7 @@ outline_size = 8
 outline_color = Color(0, 0, 0, 1)
 
 [node name="Ship" type="Area2D"]
+collision_mask = 2
 script = ExtResource("4_p1sls")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

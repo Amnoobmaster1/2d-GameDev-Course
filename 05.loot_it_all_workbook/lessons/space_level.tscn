@@ -1,31 +1,22 @@
-[gd_scene load_steps=5 format=3 uid="uid://btkjymc78ap8d"]
+[gd_scene load_steps=6 format=3 uid="uid://6f7tgbnl7dcd"]
 
-[ext_resource type="PackedScene" uid="uid://dmv50krf4bo5r" path="res://lessons/ship.tscn" id="2_2j1u5"]
-[ext_resource type="PackedScene" uid="uid://dj314kki8uxyu" path="res://health_pack.tscn" id="3_5xtw8"]
+[ext_resource type="PackedScene" uid="uid://b20bxbccqkr88" path="res://lessons/RandomItemPlacer.tscn" id="1_5thmh"]
+[ext_resource type="PackedScene" uid="uid://blop8miftg2c0" path="res://lessons/ship.tscn" id="2_2j1u5"]
 [ext_resource type="PackedScene" uid="uid://bxfevggvxo634" path="res://assets/background/space_background.tscn" id="3_e6xy1"]
-[ext_resource type="PackedScene" uid="uid://blrg7tyq7key1" path="res://gem.tscn" id="4_qrjgs"]
+[ext_resource type="PackedScene" uid="uid://dppfbuktvkak6" path="res://lessons/gem.tscn" id="4_tsb4k"]
+[ext_resource type="PackedScene" uid="uid://c6l0xdlcvy5w6" path="res://lessons/health_pack.tscn" id="5_pc3jm"]
 
 [node name="Level" type="Node2D"]
+
+[node name="RandomItemPlacer" parent="." instance=ExtResource("1_5thmh")]
 
 [node name="Ship" parent="." instance=ExtResource("2_2j1u5")]
 position = Vector2(946, 546)
 
 [node name="SpaceBackground" parent="." instance=ExtResource("3_e6xy1")]
 
-[node name="HealthPack" parent="." instance=ExtResource("3_5xtw8")]
-position = Vector2(1341, 770)
+[node name="Gem" parent="." instance=ExtResource("4_tsb4k")]
+position = Vector2(582, 311)
 
-[node name="HealthPack2" parent="." instance=ExtResource("3_5xtw8")]
-position = Vector2(388, 203)
-
-[node name="HealthPack3" parent="." instance=ExtResource("3_5xtw8")]
-position = Vector2(1427, 220)
-
-[node name="Gem" parent="." instance=ExtResource("4_qrjgs")]
-position = Vector2(792, 736)
-
-[node name="Gem2" parent="." instance=ExtResource("4_qrjgs")]
-position = Vector2(820, 111)
-
-[node name="Gem3" parent="." instance=ExtResource("4_qrjgs")]
-position = Vector2(1534, 504)
+[node name="HealthPack" parent="." instance=ExtResource("5_pc3jm")]
+position = Vector2(615, 339)
