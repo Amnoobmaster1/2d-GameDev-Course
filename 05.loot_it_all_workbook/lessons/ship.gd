@@ -1,7 +1,7 @@
 extends Area2D
 
 
-var max_speed := 1200.0
+var max_speed := 900.0
 var velocity := Vector2(0, 0)
 var steering_factor := 3.0
 var health := 10
