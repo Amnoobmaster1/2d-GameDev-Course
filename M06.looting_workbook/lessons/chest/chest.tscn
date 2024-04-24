@@ -1,26 +1,44 @@
-[gd_scene load_steps=5 format=3 uid="uid://dghfnob5k06oa"]
+[gd_scene load_steps=8 format=3 uid="uid://dghfnob5k06oa"]
 
 [ext_resource type="Texture2D" uid="uid://c3hwsm5ugp8qw" path="res://lessons/chest/bottom.png" id="1_2jxvh"]
+[ext_resource type="Script" path="res://lessons/chest/chest.gd" id="1_ufceu"]
+[ext_resource type="Shader" path="res://lessons/chest/group_outline.gdshader" id="2_tvbtq"]
 [ext_resource type="Texture2D" uid="uid://bnem1cahhoxdk" path="res://lessons/chest/top.png" id="2_vx5ik"]
 [ext_resource type="Texture2D" uid="uid://bu2jin246nel5" path="res://lessons/chest/lock.png" id="3_le02r"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q3prl"]
 size = Vector2(96, 75)
 
-[node name="Area2D" type="Area2D"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_81q5h"]
+resource_local_to_scene = true
+shader = ExtResource("2_tvbtq")
+shader_parameter/line_color = Color(0, 0, 0, 1)
+shader_parameter/line_thickness = 43.0
+shader_parameter/viewport_scale = Vector2(1, 1)
 
-[node name="Bottom" type="Sprite2D" parent="."]
+[node name="Chest" type="Area2D"]
+position = Vector2(83, 67)
+script = ExtResource("1_ufceu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(1, 4.5)
+shape = SubResource("RectangleShape2D_q3prl")
+
+[node name="CanvasGroup" type="CanvasGroup" parent="."]
+material = SubResource("ShaderMaterial_81q5h")
+
+[node name="Bottom" type="Sprite2D" parent="CanvasGroup"]
+self_modulate = Color(1, 1, 1, 0.858824)
 position = Vector2(1, 7)
 texture = ExtResource("1_2jxvh")
 
-[node name="Top" type="Sprite2D" parent="."]
+[node name="Top" type="Sprite2D" parent="CanvasGroup"]
+self_modulate = Color(1, 1, 1, 0.858824)
 position = Vector2(1, -3)
 texture = ExtResource("2_vx5ik")
 
-[node name="Lock" type="Sprite2D" parent="."]
+[node name="Lock" type="Sprite2D" parent="CanvasGroup"]
+self_modulate = Color(1, 1, 1, 0.858824)
 position = Vector2(0, 20)
 texture = ExtResource("3_le02r")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1, 4.5)
-shape = SubResource("RectangleShape2D_q3prl")
