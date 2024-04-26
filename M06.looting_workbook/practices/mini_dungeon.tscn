@@ -1,15 +1,15 @@
 [gd_scene load_steps=12 format=3 uid="uid://cit7gnkdckyux"]
 
-[ext_resource type="Texture2D" uid="uid://114x1a0rmx4l" path="res://assets/dungeon/smooth_dungeon_tileset.png" id="1_sym7n"]
-[ext_resource type="Texture2D" uid="uid://cae527caaj50v" path="res://assets/dungeon/shadow_map.png" id="2_jthdw"]
-[ext_resource type="Texture2D" uid="uid://dpym64uaptlhb" path="res://assets/dungeon/grass_tileset.png" id="3_5xjiv"]
-[ext_resource type="Texture2D" uid="uid://c1rgncfgjxefj" path="res://assets/dungeon/pillar.png" id="4_gq228"]
-[ext_resource type="Texture2D" uid="uid://l0y1k1obencd" path="res://assets/dungeon/spider_web.png" id="5_ywba7"]
-[ext_resource type="PackedScene" uid="uid://eundh35r605v" path="res://assets/torch/torch.tscn" id="6_fokey"]
-[ext_resource type="PackedScene" uid="uid://dghfnob5k06oa" path="res://lessons/chest/chest.tscn" id="7_ndgwy"]
+[ext_resource type="Texture2D" uid="uid://114x1a0rmx4l" path="res://assets/dungeon/smooth_dungeon_tileset.png" id="1_8i6qp"]
+[ext_resource type="Texture2D" uid="uid://cae527caaj50v" path="res://assets/dungeon/shadow_map.png" id="2_r30tu"]
+[ext_resource type="Texture2D" uid="uid://dpym64uaptlhb" path="res://assets/dungeon/grass_tileset.png" id="3_tubub"]
+[ext_resource type="Texture2D" uid="uid://c1rgncfgjxefj" path="res://assets/dungeon/pillar.png" id="4_opul8"]
+[ext_resource type="Texture2D" uid="uid://l0y1k1obencd" path="res://assets/dungeon/spider_web.png" id="5_6dhxf"]
+[ext_resource type="PackedScene" uid="uid://eundh35r605v" path="res://assets/torch/torch.tscn" id="6_qcqeu"]
+[ext_resource type="PackedScene" uid="uid://dghfnob5k06oa" path="res://lessons/chest/chest.tscn" id="7_de4i6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6s4s5"]
-texture = ExtResource("1_sym7n")
+texture = ExtResource("1_8i6qp")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 1:0/0 = 0
@@ -61,7 +61,7 @@ texture_region_size = Vector2i(64, 64)
 9:1/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4ftk2"]
-texture = ExtResource("2_jthdw")
+texture = ExtResource("2_r30tu")
 texture_region_size = Vector2i(64, 64)
 1:0/0 = 0
 2:0/0 = 0
@@ -117,7 +117,7 @@ texture_region_size = Vector2i(64, 64)
 14:3/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_m6vh0"]
-texture = ExtResource("3_5xjiv")
+texture = ExtResource("3_tubub")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 0:0/0/terrain_set = 0
@@ -284,12 +284,12 @@ layer_4/tile_data = PackedInt32Array(65547, 262145, 4, 131083, 262145, 5, 65542,
 
 [node name="Pillar" type="Sprite2D" parent="Background"]
 position = Vector2(192, 480)
-texture = ExtResource("4_gq228")
+texture = ExtResource("4_opul8")
 offset = Vector2(0, -64)
 
 [node name="Pillar2" type="Sprite2D" parent="Background"]
 position = Vector2(1088, 192)
-texture = ExtResource("4_gq228")
+texture = ExtResource("4_opul8")
 offset = Vector2(0, -64)
 
 [node name="Web" type="Sprite2D" parent="Background"]
@@ -297,13 +297,13 @@ modulate = Color(1, 1, 1, 0.588235)
 texture_repeat = 1
 position = Vector2(803, 92)
 scale = Vector2(0.852123, 0.852123)
-texture = ExtResource("5_ywba7")
+texture = ExtResource("5_6dhxf")
 flip_h = true
 
-[node name="Torch" parent="Background" instance=ExtResource("6_fokey")]
+[node name="Torch" parent="Background" instance=ExtResource("6_qcqeu")]
 position = Vector2(672, 128)
 
-[node name="Torch2" parent="Background" instance=ExtResource("6_fokey")]
+[node name="Torch2" parent="Background" instance=ExtResource("6_qcqeu")]
 position = Vector2(480, 128)
 
 [node name="Camera2D" type="Camera2D" parent="Background"]
@@ -323,11 +323,11 @@ mouse_filter = 2
 color = Color(0.977546, 0.842183, 0.960847, 1)
 metadata/_edit_lock_ = true
 
-[node name="Chest" parent="." instance=ExtResource("7_ndgwy")]
+[node name="Chest" parent="." instance=ExtResource("7_de4i6")]
 position = Vector2(592, 240)
 
-[node name="Chest2" parent="." instance=ExtResource("7_ndgwy")]
+[node name="Chest2" parent="." instance=ExtResource("7_de4i6")]
 position = Vector2(752, 345)
 
-[node name="Chest3" parent="." instance=ExtResource("7_ndgwy")]
+[node name="Chest3" parent="." instance=ExtResource("7_de4i6")]
 position = Vector2(439, 357)
