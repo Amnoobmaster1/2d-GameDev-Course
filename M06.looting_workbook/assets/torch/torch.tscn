@@ -1,9 +1,12 @@
-[gd_scene load_steps=10 format=3 uid="uid://eundh35r605v"]
+[gd_scene load_steps=11 format=3 uid="uid://eundh35r605v"]
 
 [ext_resource type="Texture2D" uid="uid://d3unutq03pfot" path="res://assets/torch/torch_body.png" id="1_6r3s4"]
 [ext_resource type="Script" path="res://assets/torch/torch.gd" id="1_8rman"]
 [ext_resource type="Shader" path="res://assets/torch/flame_shape.gdshader" id="2_2ljxm"]
 [ext_resource type="Texture2D" uid="uid://88m347xt4ima" path="res://assets/torch/flame_shape.png" id="3_5oi5q"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vhp7i"]
+height = 47.0
 
 [sub_resource type="Gradient" id="Gradient_8r0r1"]
 offsets = PackedFloat32Array(0.0869565, 0.666667)
@@ -28,8 +31,13 @@ shader_parameter/offset = Vector2(0, 0)
 shader_parameter/noise_sampler = SubResource("NoiseTexture2D_1dd3t")
 shader_parameter/flame_gradient = SubResource("GradientTexture1D_cnwig")
 
-[node name="Torch" type="Node2D"]
+[node name="Torch" type="Area2D"]
+position = Vector2(866, 684)
 script = ExtResource("1_8rman")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -0.5)
+shape = SubResource("CapsuleShape2D_vhp7i")
 
 [node name="TorchBody" type="Sprite2D" parent="."]
 scale = Vector2(0.666667, 0.666667)

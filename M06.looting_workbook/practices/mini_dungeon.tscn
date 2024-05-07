@@ -1,6 +1,7 @@
-[gd_scene load_steps=12 format=3 uid="uid://cit7gnkdckyux"]
+[gd_scene load_steps=13 format=3 uid="uid://cit7gnkdckyux"]
 
 [ext_resource type="Texture2D" uid="uid://114x1a0rmx4l" path="res://assets/dungeon/smooth_dungeon_tileset.png" id="1_8i6qp"]
+[ext_resource type="PackedScene" uid="uid://173c40717v0n" path="res://lessons/sparrow.tscn" id="1_61777"]
 [ext_resource type="Texture2D" uid="uid://cae527caaj50v" path="res://assets/dungeon/shadow_map.png" id="2_r30tu"]
 [ext_resource type="Texture2D" uid="uid://dpym64uaptlhb" path="res://assets/dungeon/grass_tileset.png" id="3_tubub"]
 [ext_resource type="Texture2D" uid="uid://c1rgncfgjxefj" path="res://assets/dungeon/pillar.png" id="4_opul8"]
@@ -263,6 +264,8 @@ sources/3 = SubResource("TileSetAtlasSource_m6vh0")
 [node name="MiniDungeon" type="Node2D"]
 metadata/_edit_horizontal_guides_ = []
 
+[node name="Node2D" parent="." instance=ExtResource("1_61777")]
+
 [node name="Background" type="Node2D" parent="."]
 y_sort_enabled = true
 
@@ -331,3 +334,6 @@ position = Vector2(752, 345)
 
 [node name="Chest3" parent="." instance=ExtResource("7_de4i6")]
 position = Vector2(439, 357)
+
+[node name="Node2D2" parent="." instance=ExtResource("1_61777")]
+position = Vector2(577, 386)
